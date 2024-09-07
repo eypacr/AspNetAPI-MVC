@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+@model ProductDto
+
+<h1>Ürünü Güncelle</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Update" method="post" asp-controller="Products">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group my-3">
+                <label asp-for="Name">Ürün Adı</label>
+                <input asp-for="Name" class="form-control rounded-pill border-primary shadow" required placeholder="Suç Ve Ceza" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group my-3">
+                <label asp-for="Stock">Stok</label>
+                <input asp-for="Stock" class="form-control rounded-pill border-primary shadow" required placeholder="47" />
+                <span asp-validation-for="Stock" class="text-danger"></span>
+            </div>
+
+            <div class="form-group my-3">
+                <label asp-for="Price">Fiyat</label>
+                <input asp-for="Price" class="form-control rounded-pill border-primary shadow" required placeholder="375" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group my-3">
+                <label asp-for="CategoryId">Kategori Adı</label>
+                <select asp-for="CategoryId" asp-items="ViewBag.categories" class="form-control rounded-pill border-primary shadow"></select>
+            </div>
+
+            <div class="form-group my-3 text-right">
+                <button type="submit" class="btn btn-outline-success" style="background:#33CCCC">
+                    Güncelle
+                </button>
+                <a asp-action="Index" class="btn btn-outline-dark ml-2" style="background:#990099">
+                    Geri
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
