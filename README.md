@@ -8,7 +8,7 @@
   En yaygın kullanılan metotlar.
   1. GET: Data okuma için kullandığımız tiptir
   2. POST: Yeni bir nesne eklediğimizde kullandığımız tiptir.
-  3. PUT: Bir nesne üzerinde güncelleme yapılaksa kullnadığımız tiptir.
+  3. PUT: Bir nesne üzerinde güncelleme yapılacaksa kullandığımız tiptir.
   4. DELETE: Bir nesne silmek için kullandığımız tiptir.
 
 ## Doğru API / Endpoint Yapısı
